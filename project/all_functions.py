@@ -49,11 +49,17 @@ def deposit(numb, current_client):
     return current_client["balance"]
 
 def show_balance(current_client):
-    print(f"Your current balancde is {current_client['balance']}")
+    print(f"Your current balance is {current_client['balance']}")
 
 def display_options(list):
     for i in range(0, len(list)):
-        print(i)
+        print(list[i])
+
+def operations(a):
+    isValid = False
+    if a >= 1 and a <= 4:
+        isValid = True
+    return isValid
 
 
         
