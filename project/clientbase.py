@@ -12,4 +12,5 @@ commands = [
             "3. Balance",
             "4. Quit"]
 
+# ADD VALIDATOR FOR COMMANDS!
 print(commands)
