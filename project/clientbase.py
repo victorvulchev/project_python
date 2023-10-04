@@ -13,4 +13,3 @@ commands = [
             "4. Quit"]
 
 # ADD VALIDATOR FOR COMMANDS!
-print(commands)

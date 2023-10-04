@@ -7,13 +7,14 @@ def get_client(client_name, client_list, current_client):
     return current_client
 
 def check_pin(entered_pin, current_client):
-    counter = 0
+    counter = 1
     isCorrect = True
     while entered_pin != current_client["pin"]:
         if counter == 3:
             isCorrect = False
             break
         entered_pin = input("Please enter correct PIN:")
+        counter += 1
     return isCorrect
 
 def check_entered_sum(numb, current_client):
@@ -57,9 +58,14 @@ def display_options(list):
 
 def operations(a):
     isValid = False
-    if a >= 1 and a <= 4:
-        isValid = True
-    return isValid
+    try:
+        int(a) == int
+        numb = int(a)
+        if  numb >= 1 and numb <= 4:
+            isValid = True
+        return isValid
+    except  ValueError:      
+        return isValid
 
 
         

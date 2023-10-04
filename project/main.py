@@ -1,7 +1,3 @@
-# 1 - enter name, check name
-# 2 - pin, validation
-# 3 - show balance, show operations(withdraw, deposit, balance)
-
 your_name = input("Please enter your name:")
 
 from clientbase import clients, commands
@@ -26,7 +22,9 @@ while True:
     
     while not operations(command):
         command = input("Please choose from one of the options by typing in the respective number:")
-    
+        if operations(command):
+            break
+    command = int(command)
     if command == 1:
         command = input("Enter the ammount you wish to withdaw:")
         command = check_entered_sum(command, current_client)
