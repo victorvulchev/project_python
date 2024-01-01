@@ -1,7 +1,11 @@
 your_name = input("Please enter your name:")
 
+import mysql.connector
+from db_essentials import db_config, connect_to_database, disconnec_from_database
+connection, cursor = connect_to_database(db_config)
 from clientbase import clients, commands
 from all_functions import find_name, get_client, check_pin, check_entered_sum, withdrawal, deposit, show_balance, display_options, operations
+
 
 while True:
     if not find_name(your_name, clients):
@@ -41,3 +45,4 @@ while True:
     else:
         print("Have a nice day!")
         break
+disconnec_from_database(connection, cursor)

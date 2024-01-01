@@ -1,4 +1,7 @@
-def find_name(client_name, client_list):
+import mysql.connector
+
+
+def find_name(client_name, client_list, cursor, connection):
     result = any(client for client in client_list if client.name == client_name)
     return result
 
